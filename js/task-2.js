@@ -26,7 +26,6 @@ const images = [
 ];
 
 const ulElem = document.querySelector('.gallery');
-
 const elems = [];
 
 for (const { url, alt } of images) {
