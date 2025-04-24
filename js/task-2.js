@@ -26,14 +26,19 @@ const images = [
 ];
 
 const ulElem = document.querySelector('.gallery');
+
 const elems = [];
 
 for (const { url, alt } of images) {
-  const elem = document.createElement('img');
-  elem.setAttribute('src', url);
-  elem.setAttribute('alt', alt);
-  elem.style.width = '250px';
-  elems.push(elem);
+  const img = document.createElement('img');
+  const li = document.createElement('li');
+
+  img.setAttribute('src', url);
+  img.setAttribute('alt', alt);
+  img.style.width = '250px';
+
+  li.append(img);
+  elems.push(li);
 }
 
 ulElem.append(...elems);
